@@ -17,7 +17,7 @@
 
   </table-pane>
   <table-pane :activeKey="4">
-    <div class="shop-content" style="overflow:scroll" @scroll.passive="onScroll">
+    <div class="shop-content" @scroll.passive="onScroll">
       <div class="scroll-container">
         <goods-card :data="Expired"></goods-card>
 
@@ -188,7 +188,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 * {
   margin: 0;
   padding: 0;
@@ -210,9 +210,8 @@ html {
 }
 
 .shop-content {
-  height: 607px;
+  height: calc(100vh - 60px);
+  overflow: scroll;
   -webkit-overflow-scrolling: touch
 }
-
-.scroll-container {}
 </style>
